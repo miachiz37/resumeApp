@@ -1,16 +1,25 @@
 <html>
+  <head>
+
+    <link rel="stylesheet" type="text/css" href="formStyle.css" media="screen" />
+
+  </head>
 <body>
-<h1>Personal Information</h1>
-<form action="/action_page.php">
-  <label for="fname">*First name:</label>
+  
+  <h1 style="background-color:powderblue;">Resume Builder</h1>
+
+<p style="font-size:25px;">Personal Information</p>
+
+  <label for="fname"><div> *First name:</label></div>
+
   <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">*Last name:</label>
+  <label for="lname"><div>*Last name:</label></div>
   <input type="text" id="lname" name="lname"><br><br>
-  <label for="streetname">*Street name:</label>
+  <label for="streetname"><div>*Street name:</label></div>
   <input type="text" id="streetname" name="streetname"><br><br>
-  <label for="city">*City:</label>
+  <label for="city"><div>*City:</label></div>
   <input type="text" id="city" name="city"><br><br>
-  <label for="State">*Choose your state:</label>
+  <label for="State"><div>*Choose your state:</label></div>
   <select id="State" name="State">
     <option value="AL">AL</option>
     <option value="AK">AK</option>
@@ -44,7 +53,7 @@
     <option value="NY">NY</option>
     <option value="NC">NC</option>
     <option value="ND">ND</option>
-    <option value="OH">OH</option>
+    <option value="OH">OH</option> 
     <option value="OK">OK</option>
     <option value="OR">OR</option>
     <option value="PA">PA</option>
@@ -59,16 +68,16 @@
     <option value="WI">WI</option>
     <option value="WY">WY</option>
     </select>
+  
+    <br><br><label for="zipcode"><div>*Zipcode:</label></div>
+  <input type="number" id="zipcode" name="zipcode">
 
-    <br><br><label for="zipcode">*Zipcode:</label>
-  <input type="number" id="zipcode" name="zipcode"><br><br>
+<br><br><p style="font-size:17px;">*Pick at least one of the following contact fields</p>
 
-<br><br>*Pick at least one of the following contact fields</h1><br><br>
-
-<label for="phoneNumber">Phone Number (numbers only):</label>
+<label for="phoneNumber"><div>Phone Number (numbers only):</label></div>
   <input type="number" id="phonenumber" name="phonenumber"><br><br>
 
-  <label for="emailaddress">Email Address:</label>
+  <label for="emailaddress"><div>Email Address:</label></div>
   <input type="text" id="emailaddress" name="emailaddress"><br><br>
 
 
@@ -76,9 +85,10 @@
 
 
 
-
-  <input type="submit" value="Submit">
-  <br><br>* indicates a required field
+<a href="index2.html"><button>Next</button></a>
+  
+  <p style="color:red;">* indicates a required field</p>
+  <br><br>
 </form>
 
 </body>
