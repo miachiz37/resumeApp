@@ -11,16 +11,15 @@
 <p style="font-size:25px;">Personal Information</p>
 
   <label for="fname"><div> *First name:</label></div>
-
-  <input type="text" id="fname" name="fname"><br><br>
+  <input type="text" id="fname" name="fname" required ><br><br>
   <label for="lname"><div>*Last name:</label></div>
-  <input type="text" id="lname" name="lname"><br><br>
+  <input type="text" id="lname" name="lname" required><br><br>
   <label for="streetname"><div>*Street name:</label></div>
-  <input type="text" id="streetname" name="streetname"><br><br>
+  <input type="text" id="streetname" name="streetname" required><br><br>
   <label for="city"><div>*City:</label></div>
-  <input type="text" id="city" name="city"><br><br>
+  <input type="text" id="city" name="city" required ><br><br>
   <label for="State"><div>*Choose your state:</label></div>
-  <select id="State" name="State">
+  <select id="State" name="State" required>
     <option value="AL">AL</option>
     <option value="AK">AK</option>
     <option value="AZ">AZ</option>
@@ -70,7 +69,7 @@
     </select>
   
     <br><br><label for="zipcode"><div>*Zipcode:</label></div>
-  <input type="number" id="zipcode" name="zipcode">
+  <input type="number" id="zipcode" name="zipcode" required>
 
 <br><br><p style="font-size:17px;">*Pick at least one of the following contact fields</p>
 
@@ -79,17 +78,18 @@
 
   <label for="emailaddress"><div>Email Address:</label></div>
   <input type="text" id="emailaddress" name="emailaddress"><br><br>
-
-
-
-
+<input type="submit">
 
 
 <a href="index2.html"><button>Next</button></a>
+
+
+
+
   
   <p style="color:red;">* indicates a required field</p>
   <br><br>
-</form>
+
 
 </body>
 </html>
