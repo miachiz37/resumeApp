@@ -1,5 +1,15 @@
 <html>
-    <head></head>
+    <head>
+      <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["fname"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+        }
+        </script>
+    </head>
     <body>
 
 
@@ -7,36 +17,36 @@
 <h1 style="background-color:powderblue;">Resume Builder</h1>
 <p style="font-size:25px;">Previous Experience</p>
 
-
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
 <fieldset>
-    <p style="font-size:20px;">First Experience:</p>
+    <p style="font-size:20px;">*First Experience:</p>
 
 
   <label for="companyName"><div> *Name of Company/Project:</label></div>
-  <input type="text" id="companyName" name="companyName"><br><br>
+  <input type="text" id="companyName1" name="companyName1"><br><br>
   <label for="title"><div>*Title:</label></div>
-  <input type="text" id="title" name="title"><br><br>
+  <input type="text" id="title1" name="title1"><br><br>
   <label for="startDate"><div>*Start Date:</label></div>
-  <input type="text" id="startDate" name="startDate"><br><br>
+  <input type="date" id="startDate1" name="startDate1"><br><br>
   <label for="endDate"><div>*End Date:</label></div>
-  <input type="text" id="endDate" name="endDate"><br><br>
+  <input type="date" id="endDate1" name="endDate1"><br><br>
   <label for="response"><div>*Responsibilities:</label></div>
- <input type="text" id="response" name="response"><br><br>
+ <input type="text" id="responsibilties1" name="responsibilites1"><br><br>
   </fieldset>
 <br><br>
   <fieldset>
   <p style="font-size:20px;">Second Experience:</p>
 
-  <label for="companyName"><div> *Name of Company/Project:</label></div>
-  <input type="text" id="companyName" name="companyName"><br><br>
-  <label for="title"><div>*Title:</label></div>
-  <input type="text" id="title" name="title"><br><br>
-  <label for="startDate"><div>*Start Date:</label></div>
-  <input type="text" id="startDate" name="startDate"><br><br>
-  <label for="endDate"><div>*End Date:</label></div>
-  <input type="text" id="endDate" name="endDate"><br><br>
-  <label for="response"><div>*Responsibilities:</label></div>
- <input type="text" id="response" name="response"><br><br>
+  <label for="companyName"><div> Name of Company/Project:</label></div>
+  <input type="text" id="companyName2" name="companyName2"><br><br>
+  <label for="title"><div>Title:</label></div>
+  <input type="text" id="title2" name="title2"><br><br>
+  <label for="startDate"><div>Start Date:</label></div>
+  <input type="text" id="startDate2" name="startDate2"><br><br>
+  <label for="endDate"><div>End Date:</label></div>
+  <input type="text" id="endDate2" name="endDate2"><br><br>
+  <label for="response"><div>Responsibilities:</label></div>
+ <input type="text" id="responsibilties2" name="responsibilities2"><br><br>
   </fieldset>
 
 <br><br>
@@ -44,22 +54,24 @@
     <p style="font-size:20px;">Third Experience:</p>
   
     <form>
-    <label for="companyName"><div> *Name of Company/Project:</label></div>
-    <input type="text" id="companyName" name="companyName"><br><br>
-    <label for="title"><div>*Title:</label></div>
-    <input type="text" id="title" name="title"><br><br>
-    <label for="startDate"><div>*Start Date:</label></div>
-    <input type="text" id="startDate" name="startDate"><br><br>
-    <label for="endDate"><div>*End Date:</label></div>
-    <input type="text" id="endDate" name="endDate"><br><br>
-    <label for="response"><div>*Responsibilities:</label></div>
-   <input type="text" id="response" name="response"><br><br>
+    <label for="companyName"><div> Name of Company/Project:</label></div>
+    <input type="text" id="companyName3" name="companyName3"><br><br>
+    <label for="title"><div>Title:</label></div>
+    <input type="text" id="title3" name="title3"><br><br>
+    <label for="startDate"><div>Start Date:</label></div>
+    <input type="text" id="startDate3" name="startDate3"><br><br>
+    <label for="endDate"><div>End Date:</label></div>
+    <input type="text" id="endDate3" name="endDate3"><br><br>
+    <label for="response"><div>Responsibilities:</label></div>
+   <input type="text" id="responsibilties3" name="responsibilties3"><br><br>
    </form> 
   </fieldset>
-
+<input type ="submit" value="Next">
+</form>
    
- <a href="index.html"><button>Back</button></a>      
- <input type="submit" value="Next">
+<a href="randomNextPage.html"><button>Next</button></a>
+
+
  <p style="color:red;">* indicates a required field</p>
 
     </body>
