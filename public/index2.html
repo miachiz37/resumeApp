@@ -1,23 +1,25 @@
 <html>
-    <head>
-      <script>
-        function validateForm() {
-          let x = document.forms["myForm"]["fname"].value;
-          if (x == "") {
-            alert("Name must be filled out");
-            return false;
-          }
+<head>
+  <script>
+    function validateForm() {
+      //let personalInfo = document.forms["myForm"].getElementsByTagName("input");
+      let requiredFields = ["companyName1","title1", "startDate1", "endDate1","responsibilities1"];
+      for(field of requiredFields){
+        let value = document.forms["myForm"][field].value;
+        if(value == ""){
+          alert("You are missing a required field");
+          return false;
         }
-        </script>
-    </head>
-    <body>
-
+      }
+  
+  }
+    </script>
 
 
 <h1 style="background-color:powderblue;">Resume Builder</h1>
 <p style="font-size:25px;">Previous Experience</p>
 
-<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+<form name="myForm" action="randomNextPage.html" onsubmit="return validateForm()" method="post">
 <fieldset>
     <p style="font-size:20px;">*First Experience:</p>
 
@@ -30,6 +32,7 @@
   <input type="date" id="startDate1" name="startDate1"><br><br>
   <label for="endDate"><div>*End Date:</label></div>
   <input type="date" id="endDate1" name="endDate1"><br><br>
+  p If you are currently in this position choose today's date.
   <label for="response"><div>*Responsibilities:</label></div>
  <input type="text" id="responsibilties1" name="responsibilites1"><br><br>
   </fieldset>
@@ -64,15 +67,15 @@
     <input type="text" id="endDate3" name="endDate3"><br><br>
     <label for="response"><div>Responsibilities:</label></div>
    <input type="text" id="responsibilties3" name="responsibilties3"><br><br>
-   </form> 
+   
   </fieldset>
 <input type ="submit" value="Next">
 </form>
-   
-<a href="randomNextPage.html"><button>Next</button></a>
+   </body>
+
 
 
  <p style="color:red;">* indicates a required field</p>
 
-    </body>
+    
 </html>

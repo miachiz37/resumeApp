@@ -1,6 +1,31 @@
 <html>
   <head>
-
+    <script>
+      function validateForm() {
+        //let personalInfo = document.forms["myForm"].getElementsByTagName("input");
+        let requiredFields = ["fname","lname", "streetname", "city"];
+        for(field of requiredFields){
+          let value = document.forms["myForm"][field].value;
+          if(value == ""){
+            alert("You are missing a required field");
+            return false;
+          }
+        }
+        let optionalFields=["phonenumber","emailaddress"];
+        let isAnOptionalFieldFilled = false;
+        for(field of optionalFields){
+          let value = document.forms["myForm"][field].value;
+          if(value!= ""){
+            isAnOptionalFieldFilled = true;
+          }
+        } 
+        if(isAnOptionalFieldFilled == false){
+        alert("You are missing a required field");
+        }
+        return isAnOptionalFieldFilled;
+    }
+      </script>
+      
     <link rel="stylesheet" type="text/css" href="formStyle.css" media="screen" />
 
   </head>
@@ -9,17 +34,17 @@
   <h1 style="background-color:powderblue;">Resume Builder</h1>
 
 <p style="font-size:25px;">Personal Information</p>
-
+<form name="myForm" action="index2.html" onsubmit="return validateForm()" method="post">
   <label for="fname"><div> *First name:</label></div>
-  <input type="text" id="fname" name="fname" required ><br><br>
+  <input type="text" id="fname" name="fname" ><br><br>
   <label for="lname"><div>*Last name:</label></div>
-  <input type="text" id="lname" name="lname" required><br><br>
+  <input type="text" id="lname" name="lname" ><br><br>
   <label for="streetname"><div>*Street name:</label></div>
-  <input type="text" id="streetname" name="streetname" required><br><br>
+  <input type="text" id="streetname" name="streetname" ><br><br>
   <label for="city"><div>*City:</label></div>
-  <input type="text" id="city" name="city" required ><br><br>
+  <input type="text" id="city" name="city"  ><br><br>
   <label for="State"><div>*Choose your state:</label></div>
-  <select id="State" name="State" required>
+  <select id="State" name="State" >
     <option value="AL">AL</option>
     <option value="AK">AK</option>
     <option value="AZ">AZ</option>
@@ -69,7 +94,7 @@
     </select>
   
     <br><br><label for="zipcode"><div>*Zipcode:</label></div>
-  <input type="number" id="zipcode" name="zipcode" required>
+  <input type="number" id="zipcode" name="zipcode">
 
 <br><br><p style="font-size:17px;">*Pick at least one of the following contact fields</p>
 
@@ -78,18 +103,11 @@
 
   <label for="emailaddress"><div>Email Address:</label></div>
   <input type="text" id="emailaddress" name="emailaddress"><br><br>
-<input type="submit">
+ <a href="index2.html"> <input type="submit"/></a>
+</form>
 
-
-<a href="index2.html"><button>Next</button></a>
-
-
-
-
-  
   <p style="color:red;">* indicates a required field</p>
   <br><br>
-
 
 </body>
 </html>
